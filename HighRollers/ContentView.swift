@@ -73,6 +73,9 @@ struct ContentView: View {
                 updateDice()
             }
             .onAppear(perform: load)
+            .sensoryFeedback(.impact, trigger: currentResult.rolls)
+            // or .sensoryFeedback(.impact, trigger: savedResults.count)
+
         }
     }
     
